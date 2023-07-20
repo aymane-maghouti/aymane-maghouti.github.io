@@ -25,30 +25,25 @@ menu_item.forEach((item) => {
 });
 
 
-
-  // Fonction pour gérer le clic sur le bouton de téléchargement
   function downloadCV() {
-    // URL de votre fichier PDF (assurez-vous qu'il est accessible en ligne)
     var pdfURL = "CV/aymane_maghouti.pdf";
-    
-    // Créer un élément d'ancrage (lien) caché
+
     var link = document.createElement("a");
     link.style.display = "none";
     document.body.appendChild(link);
 
-    // Attribuer l'URL du fichier PDF au lien
     link.href = pdfURL;
 
-    // Définir le nom du fichier PDF une fois téléchargé (facultatif)
-    link.download = "mon_cv.pdf";
+    link.download = "AMG_CV.pdf";
 
-    // Simuler le clic sur le lien pour démarrer le téléchargement
     link.click();
 
-    // Nettoyer l'élément du lien après le téléchargement
     document.body.removeChild(link);
   }
 
-  // Ajouter un gestionnaire d'événements pour le clic sur le bouton
-  document.getElementById("downloadButton").addEventListener("click", downloadCV);
+  document.getElementById("downloadLink").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    downloadCV(); 
+  });
+
 
