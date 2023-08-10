@@ -26,7 +26,7 @@ menu_item.forEach((item) => {
 
 
   function downloadCV() {
-    var pdfURL = "CV/Aymane_Maghouti.pdf";
+    var pdfURL = "AMG/CV/Aymane_Maghouti.pdf";
 
     var link = document.createElement("a");
     link.style.display = "none";
