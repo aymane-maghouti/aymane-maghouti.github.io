@@ -11,565 +11,792 @@
 </head>
 
 <body>
+
   <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>A</span>ymane <span>M</span>aghouti</h1>
-          </a>
+<section id="header">
+  <div class="header container">
+    <div class="nav-bar">
+      <div class="brand">
+        <a href="#hero" aria-label="Home">
+          <h1><span>A</span>ymane <span>M</span>aghouti</h1>
+        </a>
+      </div>
+
+      <div class="nav-list" role="navigation" aria-label="Primary">
+        <div class="hamburger" role="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-menu" tabindex="0">
+          <div class="bar"></div>
         </div>
-       
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
+        <ul id="primary-menu">
+          <li><a href="#hero" data-after="Home">Home</a></li>
+          <li><a href="#experience" data-after="Experience">Experience</a></li> <!-- new -->
+          <li><a href="#services" data-after="Services">Services</a></li> <!-- new -->
+          <li><a href="#skills" data-after="Skills">Skills</a></li> <!-- updated target -->
+          <li><a href="#projects" data-after="Projects">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Header -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Hero -->
+<section id="hero" class="hero">
+  <div class="hero container">
+    <div class="hero-inner">
+      <h1 class="hero-title">Hi, I’m <span>Aymane Maghouti</span></h1>
+      <h2 class="hero-sub">Data Engineer · Big Data · AI Solutions</h2>
+
+      <p class="hero-text">
+        I migrate data platforms and build AI-powered data pipelines on Azure/AWS/GCP.
+        Currently pursuing an <strong>M2 in Complex Systems Engineering</strong> at
+        <strong>EILCO (Calais)</strong>.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="cta">View My Projects</a>
+        <a href="CV/Aymane_Maghouti.pdf" class="cta cta-outline" target="_blank" rel="noopener">
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /Hero -->
+
+
+
+
+<!-- About Section -->
+<section id="about">
+  <div class="about container">
+    <!-- Left: Photo (keep your existing image path) -->
+    <div class="about-left">
+      <div class="about-img">
+        <img src="./img/me.jpg" alt="Aymane Maghouti portrait">
+      </div>
+    </div>
+
+    <!-- Right: Content -->
+    <div class="about-right">
+      <h2 class="about-eyebrow">ABOUT ME</h2>
+      <h3 class="about-title">Hello there!</h3>
+      <p class="about-subtitle">Data Engineer · Big Data · AI Solutions</p>
+
+      <p class="about-bio">
+        I’m Aymane, a data engineer focused on platform migration, real-time analytics,
+        and AI-powered data pipelines. I’ve contributed to an Oracle → SQL Server migration
+        for INWI using SSIS/SSAS/SSRS/Power BI and build RAG/semantic pipelines for Arabic legal content
+        with Azure Services and GPT LLM. I enjoy turning complex data
+        problems into scalable, cloud-native solutions that enable faster decisions.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-meta">
+          <span class="label">Full Name:</span>
+          <span class="value">Aymane Maghouti</span>
+        </div>
+        <div class="about-meta">
+          <span class="label">Phone:</span>
+          <span class="value">+33 7 76 43 11 82</span>
+        </div>
+        <div class="about-meta">
+          <span class="label">Email:</span>
+          <span class="value"><a href="mailto:aymanemaghouti16@gmail.com">aymanemaghouti16@gmail.com</a></span>
+        </div>
+        <div class="about-meta">
+          <span class="label">Location:</span>
+          <span class="value">Calais (62100), France</span>
+        </div>
+        <div class="about-meta">
+          <span class="label">Website:</span>
+          <span class="value"><a href="https://aymane-maghouti.github.io/" target="_blank" rel="noopener">aymane-maghouti.github.io</a></span>
+        </div>
+      </div>
+
+      <!-- Optional social row (uses Font Awesome if you already load it) -->
+      
+      <div class="about-social">
+        <a href="https://www.linkedin.com/in/aymane-maghouti" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/aymane-maghouti" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@aymanemaghouti2065" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/aymanemaghouti4/" aria-label="instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      </div>
+     
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
+
+<h2 class="xp-title">Let's discover more</h2>
+<br>
+<h2 class="xp-title">What I’ve been working on</h2>
+
+<!-- Experience Section -->
+<!-- Work Experience -->
+<section id="experience">
+  <div class="xp container">
+    <!-- <div class="xp-header">
+      <h2 class="xp-title">Work Experience</h2>
+      <p class="xp-intro">
+        I build data platforms, streaming pipelines, and AI-powered analytics—shipped to production with measurable impact.
+      </p>
+    </div> -->
+
+    <ol class="xp-timeline">
+      <!-- Shiftbricks — Freelance -->
+      <li class="xp-item">
+      <div class="xp-dot" aria-hidden="true"></div>
+      <article class="xp-card">
+        <header class="xp-card-top">
+          <div class="xp-logo">
+            <img src="./img/logos/shiftbricks.png" alt="Shiftbricks logo" />
           </div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Skills</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          <div class="xp-role">
+            <h4>Freelance Data &amp; AI Engineer · Shiftbricks</h4>
+            <span class="xp-dates">Feb 2025 — Now · Part-time · Remote</span>
+          </div>
+          <span class="xp-badge">AI &amp; RAG</span>
+        </header>
+          <p class="xp-desc">
+            Designed and implemented AI-powered data pipelines for Arabic legal documents: Azure Document Intelligence extraction,
+            semantic chunking, OpenAI/Cohere embeddings, and CosmosDB/PostgreSQL vector search. Automated data cleaning,
+            metadata extraction, hierarchical structuring; built FastAPI/Spring Boot services and dashboards.
+          </p>
+          <ul class="xp-tags" aria-label="Technologies">
+            <li>Azure Services</li><li>OpenAI/Cohere</li><li>CosmosDB (MongoDB)</li><li>PostgreSQL</li><li>Python</li>
+            <li>BeautifulSoup</li><li>FastAPI</li><li>React.JS</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Header -->
+        </article>
+      </li>
+
+      <!-- SetGet / INWI -->
+      <li class="xp-item">
+        <div class="xp-dot" aria-hidden="true"></div>
+        <article class="xp-card">
+          <header class="xp-card-top">
+            <div class="xp-logo">
+              <img src="./img/logos/inwi.png" alt="inwi logo" />
+            </div>
+            <div class="xp-role">
+              <h4>Data Platform Migration &amp; Real-Time Analytics · SetGet Consulting (INWI)</h4>
+              <span class="xp-dates">Feb 2025 — Jun 2025 · Casablanca · On-site </span>
+            </div>
+            <span class="xp-badge xp-badge--accent">DW &amp; BI</span>
+          </header>
+          <p class="xp-desc">
+            Led Oracle → SQL Server migration. Built ETL Pipelines with SSIS, partitioned purge (6h → 1 min), Kafka real-time analytics,
+            ,delivered Power BI/SSRS reporting and built monitoring system. Reduced TCO and standardized DW loads.
+          </p>
+          <ul class="xp-tags" aria-label="Technologies">
+            <li>SQL Server</li><li>SSIS</li><li>SSRS</li><li>Apache Kafka</li><li>Power BI</li><li>Python</li><li>T-SQL</li><li>Oracle Database</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- Shiftbricks — Data Ingestion Pipeline -->
+      <li class="xp-item">
+        <div class="xp-dot" aria-hidden="true"></div>
+        <article class="xp-card">
+          <header class="xp-card-top">
+            <div class="xp-logo">
+              <img src="./img/logos/shiftbricks.png" alt="Shiftbricks logo" />
+            </div>
+            <div class="xp-role">
+              <h4>Data Ingestion Pipeline for AI Application · Shiftbricks</h4>
+              <span class="xp-dates">Jun 2024 — Sep 2024 · Al Hoceima · Remote</span>
+            </div>
+            <span class="xp-badge">Data Platform</span>
+          </header>
+          <p class="xp-desc">
+            Designed an ingestion pipeline (Medallion architecture) to transform unstructured data into structured datasets.
+            Ensured data quality, orchestrated with Airflow, and built a validation web app.
+          </p>
+          <ul class="xp-tags" aria-label="Technologies">
+            <li>Python</li><li>FastAPI</li><li>React.js</li><li>MongoDB</li><li>PostgreSQL</li><li>Airflow</li>
+            <li>Docker</li><li>Git/GitLab</li><li>Postman</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- ONCF -->
+      <li class="xp-item">
+        <div class="xp-dot" aria-hidden="true"></div>
+        <article class="xp-card">
+          <header class="xp-card-top">
+            <div class="xp-logo">
+              <img src="./img/logos/oncf.png" alt="ONCF logo" />
+            </div>
+            <div class="xp-role">
+              <h4>Data Collection &amp; Analysis + KPI Dashboards · ONCF</h4>
+              <span class="xp-dates">Jul 2024 — Sep 2024 · Rabat · Hybrid</span>
+            </div>
+            <span class="xp-badge xp-badge--accent">BI &amp; DW</span>
+          </header>
+          <p class="xp-desc">
+            Built a Python ETL to collect train circulation data into a SQL Server warehouse.
+            Modeled a star schema and delivered Power BI dashboards for key performance indicators.
+          </p>
+          <ul class="xp-tags" aria-label="Technologies">
+            <li>SQL Server</li><li>Python</li><li>SQLAlchemy</li><li>Power BI</li><li>DAX</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- Marketing Confort -->
+      <li class="xp-item">
+        <div class="xp-dot" aria-hidden="true"></div>
+        <article class="xp-card">
+          <header class="xp-card-top">
+            <div class="xp-logo">
+              <img src="./img/logos/mc_logo_v2.webp" alt="Marketing Confort logo" />
+            </div>
+            <div class="xp-role">
+              <h4>Modern E-commerce (Microservices) · Marketing Confort</h4>
+              <span class="xp-dates">Jul 2024 — Oct 2024 · Fès · Remote</span>
+            </div>
+            <span class="xp-badge">Full-Stack</span>
+          </header>
+          <p class="xp-desc">
+            Developed React.js frontends and Spring-based REST APIs; integrated FE/BE via APIs;
+            centralized config with Spring Cloud Config Server; collaborated via GitLab; Agile/Scrum with Jira.
+          </p>
+          <ul class="xp-tags" aria-label="Technologies">
+            <li>Java</li><li>Spring Boot</li><li>Spring Data JPA</li><li>React.js</li><li>TypeScript</li>
+            <li>PostgreSQL</li><li>Microservices</li><li>Git/GitLab</li><li>Postman</li>
+          </ul>
+        </article>
+      </li>
+    </ol>
+  </div>
+</section>
+<!-- End Work Experience -->
 
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
+<!-- End Experience Section -->
 
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Aymane <span></span></h1>
-        <h1>Data Engineering Student </h1>
-        <a href="#projects" type="button" class="cta">View My projects</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
 
-  <!-- Service Section -->
-  <section id="services" >
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">Sk<span>il</span>ls</h1>
-        <p>In my career, I have been learning a multitude of skills that have enriched my professional journey. 
-          Among these, I have become proficient in various programming languages, enabling me to develop interactive applications. 
-          Additionally, I have gained a strong understanding of databases and data management. 
-          These ongoing learning experiences continually inspire me to pursue my passion for technological development and push myself to tackle new and exciting challenges in my professional field, and here is a summary of my skills.</p>
-      </div>
-      <div class="content">
-        <div class="card">
-          <div class="icon">
-              <i class="fab fa-dev"></i>
-          </div>
-          <div class="info">
-              <h3 style="font-size: x-large;">
-                  Programming languages - FrameWorks
-              </h3>
-              <p style="text-align: left;">
-                  Python <br>
-                  Java <br>
-                  HTML/CSS , JS , Flask <br>
-                  JEE (Spring - Spring Boot) - ReactJS<br>
-                  SQL - PL/SQL <br>
-                  shell (Basic notion) <br>
-              </p>
-          </div>
-      </div>
-
-      <div class="card">
-        <div class="icon">
-            <i class="fas fa-server"></i>
-        </div>
-        <div class="info">
-            <h3 style="font-size: x-large;">
-                Big Data tech - Bi tools
-            </h3>
-            <p style="text-align: left;">
-                Hadoop <br>
-                Hive <br>
-                Kafka  <br>
-                Spark(PySpark) <br>
-                Hbase <br>
-                Power BI
-
+      <h2 class="xp-title">My Services</h2>
+<!-- Services -->
+<section id="services">
+  <div class="svc container">
+    <div class="svc-grid">
+      <!-- 1. Data Engineering & Streaming -->
+      <article class="svc-card">
+        <div class="svc-head">
+          <div class="svc-icon">⚡</div>
+          <div class="svc-titles">
+            <h3 class="svc-name">Data Engineering &amp; Streaming</h3>
+            <p class="svc-desc">
+              Design and build scalable pipelines for both batch and real-time data. 
+              Implement CDC (Change Data Capture), streaming, and event-driven architectures 
+              to ensure reliable, low-latency data flows with strong quality and lineage.
             </p>
+          </div>
         </div>
+        <ul class="svc-tags" aria-label="Technologies">
+          <li>Data Streaming</li><li>Data Transformation</li><li>Data Storage</li><li>Pipeline Orchestration</li><li>Big Data</li><li>System Monitoring</li>
+        </ul>
+      </article>
+
+      <!-- 2. Data Warehousing & BI -->
+      <article class="svc-card">
+        <div class="svc-head">
+          <div class="svc-icon">📊</div>
+          <div class="svc-titles">
+            <h3 class="svc-name">Data Warehousing &amp; Business Intelligence</h3>
+            <p class="svc-desc">
+              Build and optimize modern data warehouses with dimensional modeling and star schemas. 
+              Deliver powerful dashboards and KPIs that empower decision-makers with actionable insights.
+            </p>
+          </div>
+        </div>
+        <ul class="svc-tags">
+          <li>ETL Pipelines</li><li>Data Modeling</li><li>Cloud DW</li><li>Power BI</li><li>Data Vsualization</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-head">
+          <div class="svc-icon">🛠️</div>
+          <div class="svc-titles">
+            <h3 class="svc-name">Data Migration &amp; Governance</h3>
+            <p class="svc-desc">
+              Lead complex migrations from legacy systems (Oracle → SQL Server) with minimal downtime. 
+              Implement partitioning, purging strategies, and metadata-driven governance 
+              for secure, compliant, and cost-effective data management.
+            </p>
+          </div>
+        </div>
+        <ul class="svc-tags">
+          <li>Data platform Migration</li><li>Partitioning</li><li>Data Lineage</li><li>DB Optimisation</li>
+        </ul>
+      </article>
+
+
+      <!-- 3. AI & RAG Solutions -->
+      <article class="svc-card">
+        <div class="svc-head">
+          <div class="svc-icon">🧠</div>
+          <div class="svc-titles">
+            <h3 class="svc-name">AI Solutions</h3>
+            <p class="svc-desc">
+              Develop intelligent retrieval-augmented generation (RAG) systems for multilingual content, 
+              with semantic chunking, embeddings, and context-aware query handling. 
+              Ensure reliable AI outputs through evaluation.
+            </p>
+          </div>
+        </div>
+        <ul class="svc-tags">
+          <li>NLP</li><li>Prompt Engineering</li><li>Data Cleaning & Processing</li><li>Data Modeling</li><li>Metadata & Hybrid Search</li>
+        </ul>
+      </article>
+
+      <!-- 4. Cloud & MLOps -->
+      <article class="svc-card">
+        <div class="svc-head">
+          <div class="svc-icon">☁️</div>
+          <div class="svc-titles">
+            <h3 class="svc-name">Cloud &amp; MLOps</h3>
+            <p class="svc-desc">
+              Deploy, monitor, and scale machine learning models and APIs in the cloud. 
+              Implement CI/CD, observability, and automation to accelerate production workflows 
+              while controlling costs.
+            </p>
+          </div>
+        </div>
+        <ul class="svc-tags">
+          <li>Azure</li><li>AWS</li><li>Google Cloud</li><li>Docker</li><li>MLflow</li><li>CI/CD</li>
+        </ul>
+      </article>
+
+      <!-- 5. Full-Stack Integrations -->
+      <article class="svc-card">
+        <div class="svc-head">
+          <div class="svc-icon">🧩</div>
+          <div class="svc-titles">
+            <h3 class="svc-name">Full-Stack Integrations</h3>
+            <p class="svc-desc">
+              Build complete solutions that combine backend APIs and user-friendly interfaces. 
+              Deliver seamless integrations between data systems, microservices, and modern web or mobile applications.
+            </p>
+          </div>
+        </div>
+        <ul class="svc-tags">
+          <li>FastAPI</li><li>Spring Boot</li><li>React / React Native</li><li>TypeScript</li><li>PostgreSQL</li><li>MongoDB</li>
+        </ul>
+      </article>
+
+      <!-- 6. Data Migration & Governance -->
+      
     </div>
+  </div>
+</section>
+
+<!-- End Services -->
+
+
+
+
+<h2 class="xp-title">Skills</h2>
+      <p class="sk-sub">
+        A practical stack across data engineering, AI, cloud, and full-stack—used to ship reliable, production-grade solutions.
+      </p>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="sk container">
+  
+
+    <div class="sk-grid">
+      <!-- Programming & Frameworks -->
+      <article class="sk-card">
+        <h3 class="sk-name">Programming & Frameworks</h3>
+        <p class="sk-desc">Clean, testable services and UIs with modern tooling.</p>
+        <ul class="sk-tags">
+          <li>Python</li><li>Java</li><li>TypeScript / JS</li><li>SQL</li><li>Bash</li>
+          <li>FastAPI</li><li>Spring Boot</li><li>React</li><li>React Native</li>
+        </ul>
+      </article>
+
+      <!-- Data Engineering & Streaming -->
+      <article class="sk-card">
+        <h3 class="sk-name">Data Engineering & Streaming</h3>
+        <p class="sk-desc">Batch + real-time pipelines, CDC, quality and lineage.</p>
+        <ul class="sk-tags">
+          <li>Apache Kafka</li><li>Apache Spark</li><li>Airflow</li>
+          <li>Hadoop</li><li>Flink</li>
+        </ul>
+      </article>
+
+      <!-- Data Warehousing & BI -->
+      <article class="sk-card">
+        <h3 class="sk-name">Data Warehousing & BI</h3>
+        <p class="sk-desc">Dimensional models, KPIs, governance, and reporting.</p>
+        <ul class="sk-tags">
+          <li>SQL Server</li><li>SSIS</li><li>SSRS</li><li>Power BI</li>
+          <li>Data Modeling</li><li>Data Lineage</li>
+        </ul>
+      </article>
+
+      <!-- Databases -->
+      <article class="sk-card">
+        <h3 class="sk-name">Databases</h3>
+        <p class="sk-desc">RDBMS & NoSQL tuned for reliability and scale.</p>
+        <ul class="sk-tags">
+          <li>PostgreSQL</li><li>SQL Server</li><li>Oracle</li><li>MySQL</li>
+          <li>MongoDB</li><li>ClickHouse</li><li>HBase</li>
+        </ul>
+      </article>
+
+      <!-- AI & RAG -->
+      <article class="sk-card">
+        <h3 class="sk-name">Machine Learing & Deep Learing</h3>
+        <p class="sk-desc">Building predictive and generative models with modern ML/DL techniques.</p>
+        <ul class="sk-tags">
+          <li>Regression</li><li>Classification</li><li>Clustering</li><li>LLMs</li><li>Prompt Engineering</li>
+          <li>Vector Search</li><li>Hybrid Search</li>
+        </ul>
+      </article>
+
+      <!-- Cloud & MLOps -->
+      <article class="sk-card">
+        <h3 class="sk-name">Cloud &amp; MLOps</h3>
+        <p class="sk-desc">Deploy, monitor, and automate MLOps Pipeline</p>
+        <ul class="sk-tags">
+          <li>Azure</li><li>AWS</li><li>GCP</li><li>Docker</li>
+          <li>MLflow</li>
+        </ul>
+      </article>
+
+      <!-- Tools & Practices -->
+      <article class="sk-card">
+        <h3 class="sk-name">Tools &amp; Practices</h3>
+        <p class="sk-desc">Collaboration, delivery, and quality at speed.</p>
+        <ul class="sk-tags">
+          <li>Git</li><li>GitLab</li><li>GitHub</li><li>Jira</li><li>Postman</li>
+          <li>Scrum</li><li>Agile</li>
+        </ul>
+      </article>
+
+      <!-- Languages -->
+      <article class="sk-card">
+        <h3 class="sk-name">Languages</h3>
+        <p class="sk-desc">Working fluency in multi-lingual environments.</p>
+        <ul class="sk-tags">
+          <li>Arabic — Native</li><li>French — Courant</li><li>English — Courant</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- End Skills -->
+
+
       
 
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-database"></i>
-            </div>
-            <div class="info">
-                <h3 style="font-size: x-large;">
-                    DataBases
-                </h3>
-                <p style="text-align: left;">
-                    MySQL <br>
-                    Oracle SQL Developer <br>
-                    Microsoft SQL Server <br>
-                    PostgreSQL <br>
-                    ClickHouse <br>
-                    MongoDB 
+<!-- Projects Section -->
+<section id="projects" class="projects">
+<h2 class="xp-title">Latest Projects</h2>
+      <p class="sk-sub">
+        A curated selection of data engineering, AI, and cloud projects I’ve delivered—
+        from end-to-end pipelines to scalable AI solutions.
+      </p>
 
-                </p>
-            </div>
+      <br>
+      <br>
+      <br>
+
+
+  <div class="pj container">
+    
+ 
+
+    <div class="pj-grid">
+      <!-- Example project card -->
+      <article class="pj-card">
+        <div class="pj-img">
+          <img src="img/cloud-project-azure.png" alt="Azure ML Project" loading="lazy">
         </div>
-
-        <div class="card">
-          <div class="icon">
-            <i class="fas fa-brain"></i>
-
-          </div>
-          <div class="info">
-              <h3 style="font-size: x-large;">
-                  ML - DL - Data Science
-              </h3>
-              <p style="text-align: left;">
-                  Scikit Learn <br>
-                  Tensorflow(Keras) <br>
-                  Regression <br>
-                  Classification <br>
-                  Clustering <br>
-                  Dimensionality Reduction <br>
-
-              </p>
-          </div>
+        <div class="pj-body">
+          <h3 class="pj-name">ML-Based Solution with Microsoft Azure</h3>
+          <p class="pj-desc">
+            Migration of local infra to Azure Cloud with FastAPI, Spring Boot, React Native, and Power BI. 
+            Integrated MLOps pipelines and cloud-native deployment for scalability, automation, and real-time insights.
+          </p>
+          <ul class="pj-tags">
+            <li>Azure</li><li>Mlflow</li><li>Regression model</li><li>FastAPI</li><li>Spring Boot</li><li>React Native</li><li>PostgreSQL</li><li>Power BI</li>
+          </ul>
+          <a href="https://youtube.com/playlist?list=PLW1I-Z_aFLvaYwo2BjKF-y5zQbrmygHPr&si=u7XLx_7M2OVn5_jM"
+             class="pj-link" target="_blank">More details →</a>
         </div>
-
-
-        <div class="card">
-            <div class="icon">
-                <i class="fa fa-desktop"></i>
-            </div>
-            <div class="info">
-                <h3 style="font-size: x-large;">
-                    Operating Systems
-                </h3>
-                <p style="text-align: left;">
-                    Linux (Ubuntu) <br>
-                    Windows
-                </p>
-            </div>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-              <i class="fa fa-language"></i>
-          </div>
-          <div class="info">
-            <h3 style="font-size: x-large;">
-              Languages
-            </h3 >
-            <p style="text-align: left;">
-              Arabic (Native) <br>
-              French (Intermediate) <br>
-              English (Intermediate)
-            </p>
-          </div>
+      </article>
+      
+          <!-- 2. Event Driven -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/Architecture_EDA.png" alt="Event Driven Architecture" loading="lazy">
       </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Event-Driven Architecture with Debezium</h3>
+        <p class="pj-desc">
+          Real-time CDC pipeline with Kafka, Spark Streaming, and Debezium. Captures database changes, processes events, and updates analytics dashboards instantly.
+        </p>
+        <ul class="pj-tags">
+          <li>Kafka</li><li>Spark Streaming</li><li>Debezium</li><li>CDC</li><li>Spring Boot</li><li>React.JS</li>
+        </ul>
+        <a href="https://youtu.be/OeddlyLVAuQ?si=CrWLS-Hnt9eZMkE7" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
 
+    <!-- 3. AWS Pipeline -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/architecture_AWS-Cloud.png" alt="AWS Smartphone Pipeline" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Smartphone Data Pipeline using AWS Ecosystem</h3>
+        <p class="pj-desc">
+          Migrated on-premises big data stack to AWS. Automated ingestion, processing, and analysis with Glue, Athena, and QuickSight, storing results in S3.
+        </p>
+        <ul class="pj-tags">
+          <li>AWS Glue</li><li>Athena</li><li>S3</li><li>QuickSight</li><li>Python</li><li>BeautifulSoup</li>
+        </ul>
+        <a href="https://youtu.be/1uOFkvmJaEQ?si=UAjX-FXssKFUIIsW" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 4. Spring Boot AWS -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/deployment_architecture.png" alt="Spring Boot AWS Deployment" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Deploy a Spring Boot app on AWS Cloud</h3>
+        <p class="pj-desc">
+          Automated deployment with Elastic Beanstalk, S3, EC2, and RDS. Scalable deployment pipeline for microservices.
+        </p>
+        <ul class="pj-tags">
+          <li>AWS</li><li>Elastic Beanstalk</li><li>S3</li><li>EC2</li><li>RDS</li>
+        </ul>
+        <a href="https://youtu.be/MDplJJlo-y8?si=MkIazbRzFpxdv2xV" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 5. Exam Planning -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/architecture_jee_project.png" alt="Exam Planning System" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Exam Planning System with Spring Boot</h3>
+        <p class="pj-desc">
+          Full-stack application with layered architecture. Managed exams scheduling using Spring Boot backend and React frontend.
+        </p>
+        <ul class="pj-tags">
+          <li>Spring Boot</li><li>thymeleaf</li><li>PostgreSQL</li><li>Spring Data/li>
+          <li>Spring Security</li>
+        </ul>
+        <a href="https://www.youtube.com/playlist?list=PLW1I-Z_aFLvbNwouovw_Ck-ufif31Bf2W" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 6. Student Management -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/architecture_spring.png" alt="Student Management System" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Student Management System with Spring Boot</h3>
+        <p class="pj-desc">
+          CRUD system for managing students. Built with Spring Boot, JSP frontend, and SQL database.
+        </p>
+        <ul class="pj-tags">
+          <li>Spring Boot</li><li>JSP</li><li>Bootstrap</li><li>MySQL</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Students-Management-System-Spring" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 7. Big Data Prediction -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/arch_big_data_project.png" alt="Big Data Smartphone Prediction" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Smartphone Price Prediction in Big Data Environment</h3>
+        <p class="pj-desc">
+          Lambda architecture combining batch and real-time layers. Built on Spark + Kafka with BI dashboards.
+        </p>
+        <ul class="pj-tags">
+          <li>Kafka</li><li>Spark</li><li>HDFS</li><li>PostgreSQL</li>
+          <li>python</li><li>PowerBI</li><li>Airflow</li><li>HBase</li><li>Spring Boot</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Big-Data-Project" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 8. Jumia Sentiment -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/architecture.png" alt="Jumia Sentiment Analysis" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Sentiment Analysis & Price Prediction</h3>
+        <p class="pj-desc">
+          Sentiment analysis for Jumia reviews and price prediction with regression models.
+        </p>
+        <ul class="pj-tags">
+          <li>Python</li><li>Scikit-learn</li><li>Regression</li><li>Classification</li>
+          <li>HTML/CSS</li><li>MySQL</li><li>Web Scrapping</li><li>Flask</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Sentiment-Analysis-for-Jumia-Reviews-and-Smartphone-Price-Prediction-System.git"
+           class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 9. Kafka Real-Time -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/data_pipeline_kafka.png" alt="Kafka Real Time Pipeline" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Real-Time Data Pipeline using Kafka</h3>
+        <p class="pj-desc">
+          Real-time computer performance monitoring pipeline using Kafka, psutil, SQL Server, and Power BI dashboards.
+        </p>
+        <ul class="pj-tags">
+          <li>Kafka</li><li>Python</li><li>SQL Server</li><li>Power BI</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Real-Time-Data-Pipeline-Using-Kafka" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 10. Mobile Hive -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/data_pipeline_mobile.png" alt="Mobile Data Hive" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Mobile-phones Data Analysis</h3>
+        <p class="pj-desc">
+          Moved MySQL smartphone dataset to Hive via Sqoop and built BI dashboards with HiveQL + Power BI.
+        </p>
+        <ul class="pj-tags">
+          <li>Sqoop</li><li>Hive</li><li>MySQL</li><li>Power BI</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Mobile-Data-Hive-Insights" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 11. HR Azure -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/HR_AZURE.png" alt="HR Azure Pipeline" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">HR Data Pipeline with Azure</h3>
+        <p class="pj-desc">
+          Built HR data pipeline with ADF, Databricks, Blob Storage, and Power BI for reporting.
+        </p>
+        <ul class="pj-tags">
+          <li>ADF</li><li>Azure Databricks</li><li>Blob Storage</li><li>Power BI</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/HR-Data-Pipeline-Azure" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 12. Sales Pipeline -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/sales_Data_pipeline.png" alt="Sales Pipeline" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Sales Data Pipeline</h3>
+        <p class="pj-desc">
+          ETL pipeline from SQL Server to BigQuery with Airflow orchestration and Looker Studio dashboards.
+        </p>
+        <ul class="pj-tags">
+          <li>SQL Server</li><li>Airflow</li><li>BigQuery</li><li>Python</li><li>Looker Studio</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/sales-data-pipeline" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 13. HR Snowflake -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/hr_data_pipeline.png" alt="HR Data Pipeline Snowflake" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Human Resources Data Pipeline</h3>
+        <p class="pj-desc">
+          Built HR ETL pipeline with PL/SQL and SQL, Snowflake on Azure, and Informatica integration.
+        </p>
+        <ul class="pj-tags">
+          <li>PL/SQL</li><li>Snowflake</li><li>Informatica</li><li>Power BI</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Human-Resources-data-pipeline" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+    <!-- 14. YouTube -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/data_pipeline_yt.png" alt="YouTube Pipeline" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">YouTube Data Pipeline</h3>
+        <p class="pj-desc">
+          Automated ETL from YouTube API to Power BI dashboard for content analytics.
+        </p>
+        <ul class="pj-tags">
+          <li>YouTube API</li><li>Python</li><li>Snowflake</li><li>ETL</li><li>Power BI</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Youtube-data-pipeline" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+
+    <!-- 18. Contact Management -->
+    <article class="pj-card">
+      <div class="pj-img">
+        <img src="img/contact.png" alt="Contact Management App" loading="lazy">
+      </div>
+      <div class="pj-body">
+        <h3 class="pj-name">Contact Management</h3>
+        <p class="pj-desc">
+          JavaFX desktop application to manage contacts & groups. Used JDBC, MySQL and Log4j.
+        </p>
+        <ul class="pj-tags">
+          <li>Java</li><li>JavaFX</li><li>JDBC</li><li>MySQL</li>
+        </ul>
+        <a href="https://github.com/aymane-maghouti/Contact_Management" class="pj-link" target="_blank">More details →</a>
+      </div>
+    </article>
+
+
+
+      
     </div>
-    </div>
-  </section>
-  <!-- End Service Section -->
-
-  <!-- Projects Section -->
-  <section class ="projects" id="projects">
-    <h1 class="section-title" >La<span>te</span>st Pro<span>je</span>cts</h1>
-        <div class="content">
-          
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/cloud-project-azure.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">ML-Based Solution with Microsft Azure </h2>
-                <p class="project-category">
-                  This project aims to demonstrate the migration of a local infrastructure to Azure Cloud, showcasing an end-to-end architecture with FastAPI, Spring Boot, React Native, and Power BI. It highlights the integration of advanced MLOps pipelines and seamless Azure Cloud deployment for enhanced scalability, automation, and real-time insights.<strong class="project-title">
-                   <a href="https://youtube.com/playlist?list=PLW1I-Z_aFLvaYwo2BjKF-y5zQbrmygHPr&si=u7XLx_7M2OVn5_jM" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/Architecture_EDA.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Event-Driven Architecture with Debezium</h2>
-                <p class="project-category">
-                  This project demonstrates real-time data streaming and processing architecture using Kafka, Spark Streaming, and Debezium for capturing CDC (Change Data Capture) events. The pipeline collects transaction data, processes it in real time, and updates a dashboard to display real-time analytics for smartphone data. <strong class="project-title">
-                   <a href="https://youtu.be/OeddlyLVAuQ?si=CrWLS-Hnt9eZMkE7" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/architecture_AWS-Cloud.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Smartphone Data Pipeline using AWS Ecosystem</h2>
-                <p class="project-category">
-                  The project involves migrating an on-premises data pipeline (HDFS, Spark, Kafka, PostgreSQL, Power BI) to AWS, focusing on data collection, processing, analysis, and visualization using tools like BeautifulSoup, AWS Glue, Amazon Athena, and QuickSight, with results stored in S3 <strong class="project-title">
-                   <a href="https://youtu.be/1uOFkvmJaEQ?si=UAjX-FXssKFUIIsW" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/deployment_architecture.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Deploy a Spring Boot app on AWS cloud</h2>
-                <p class="project-category">
-                  Automated the migration and deployment of a Spring Boot application from on-premise to AWS using Elastic Beanstalk, S3, EC2, and RDS  <strong class="project-title">
-                   <a href="https://youtu.be/MDplJJlo-y8?si=MkIazbRzFpxdv2xV" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
+  </div>
+</section>
 
 
 
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/architecture_jee_project.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Exam Planning System with Spring Boot</h2>
-                <p class="project-category">
-                  This project leverages a layered architecture to ensure maintainability and reusability by separating business logic, database access, and presentation logic.  <strong class="project-title">
-                   <a href="https://www.youtube.com/playlist?list=PLW1I-Z_aFLvbNwouovw_Ck-ufif31Bf2W" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
 
 
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/architecture_spring.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Student Management System with Spring Boot</h2>
-                <p class="project-category">
-                  This is a simple application for managing student records built with Spring Boot (Back-end), JSP and Bootstrap (Front-end). It provides basic CRUD (Create, Read, Update, Delete) functionality for student entities.                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Students-Management-System-Spring" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/arch_big_data_project.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Smartphone Price Prediction in Big Data Environment</h2>
-                <p class="project-category">
-                  This project aims to predict smartphone prices using a combination of batch and stream processing techniques in a Big Data environment. The architecture follows the Lambda Architecture pattern, providing both real-time and batch processing capabilities to users.                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Big-Data-Project" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/architecture.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Sentiment Analysis for Jumia Reviews & Smartphone Price Prediction System</h2>
-                <p class="project-category">
-                  The project focuses on customer sentiment analysis for Jumia, aiding informed online decisions. It collects and analyzes product comments to determine sentiments and implements a decision-making algorithm. Additionally, it includes product price prediction system using regression techniques.
-                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Sentiment-Analysis-for-Jumia-Reviews-and-Smartphone-Price-Prediction-System.git" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/data_pipeline_kafka.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Real Time Data Pipeline using Kafka</h2>
-                <p class="project-category">
-                  This project implements a real-time data pipeline using Apache Kafka, Python's psutil library for metric collection, and SQL Server for data storage. The pipeline collects metrics data from the local computer, processes it through Kafka brokers, and loads it into a SQL Server database. Additionally, a real-time dashboard is created using Power BI.
-                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Real-Time-Data-Pipeline-Using-Kafka" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/data_pipeline_mobile.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Mobile-phones Data Analysis</h2>
-                <p class="project-category">
-                  This project demonstrates the process of extracting data from a MySQL database, transferring it using Apache Sqoop, storing it in Hive Data warehouse (the data actually is store in Hadoop Distributed File System (HDFS)), and performing analysis using Hive Query Language (Hive QL) (close to SQL). Then visualize the data in Power BI.
-                </p>
-                  <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Mobile-Data-Hive-Insights" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/HR_AZURE.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">HR data pipeline with Azure</h2>
-                <p class="project-category">
-                  This project is a comprehensive data engineering solution that extracts HR data from a GitHub repository, performs data transformations using Azure services, and creates an interactive HR dashboard using Power BI.(Using Azure services(Data factory, databricks and azure blob storage))
-                </p>
-                  <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/HR-Data-Pipeline-Azure" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/sales_Data_pipeline.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Sales data pipeline</h2>
-                <p class="project-category">
-                  This ETL (Extract, Transform, Load) project demonstrates the process of extracting data from a SQL Server database, transforming it using Python, orchestrating the data pipeline with Apache Airflow (running in a Docker container), loading the transformed data into Google BigQuery data warehouse, and finally creating a dashboard using Looker Studio.
-                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/sales-data-pipeline" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/hr_data_pipeline.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Human Resources data pipeline</h2>
-                <p class="project-category">
-                  This ETL (Extract, Transform, Load) project aims to extract human resources data, clean it using PL/SQL and SQL, integrate it into a Snowflake data warehouse on Azure Cloud using Informatica, and visualize the insights in Power BI.
-                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Human-Resources-data-pipeline" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/data_pipeline_yt.png">
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">YouTube data pipeline</h2>
-                <p class="project-category">
-                  The project aims to automate the extraction of data from a YouTube channel, transform the data into a suitable format, and make it available for analysis through a Power BI dashboard. By following a structured ETL process, this project streamlines data retrieval, preparation, and visualization.
-                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Youtube-data-pipeline" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/etl_jumia.png" />
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Jumia data pipeline</h2>
-                <p class="project-category">
-                  This project focuses on extracting data from the Jumia website using Beautiful Soup, storing it in an Excel file with Pandas, and then transferring the data to a PostgreSQL database using SQLAlchemy and Pandas. It's an ETL project where we extract data from a website and finally load it into a PostgreSQL database.
-                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Jumia-data-pipeline" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-
-          <div class="project-card">
-            <div class="project-image">
-                <img src="img/workFlow.png" />
-            </div>
-            <div class="project-info">
-              <h2 style="font-size: large;">Real time Computer Performance Dashboard</h2>
-                <p class="project-category">
-                  This project aims to capture, store, and visualize real-time system performance metrics through an end-to-end data pipeline. By leveraging Python, MySQL, SQL Server, and Power BI, we've created a comprehensive solution to enhance decision-making.
-                </p>
-                <strong class="project-title">
-                    <a href="https://github.com/aymane-maghouti/Real-time-Computer-Performance-Dashboard" class="more-details"> More details</a>
-                </strong>
-            </div>
-        </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="img/Loan_credit.png" />
-                </div>
-                <div class="project-info">
-                  <h2 style="font-size: large;">LoanCredit</h2>
-                    <p class="project-category">
-                      The project aims to develop a machine learning model using Logistic Regression for classifying loan credit applications as either approved or rejected. Additionally, it includes a Flask web application for deploying the trained model.                    </p>
-                    <strong class="project-title">
-                        <a href="https://github.com/aymane-maghouti/Loan-Credit" class="more-details"> More details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="img/contact.png" />
-                </div>
-                <div class="project-info">
-                  <h2 style="font-size: large;">Contact Management</h2>
-                    <p class="project-category">
-                      The project is a desktop application developed using Java and JavaFX frameWork for managing contacts and groups. It utilizes the JDBC (Java Database Connectivity) API, MySQL database and Log4j for tracking its logs.
-                    </p>
-                    <strong class="project-title">
-                        <a href="https://github.com/aymane-maghouti/Contact_Management" class="more-details"> More details</a>
-                    </strong>
-                </div>
-            </div>
-           
-            <div class="project-card">
-              <div class="project-image">
-                  <img src="img/machine learning from scratch.png" />
-              </div>
-              <div class="project-info">
-                <h2 style="font-size: large;">Machine Learning From Scratch</h2>
-                  <p class="project-category" >
-                    Machine learning algorithms from scratch using Python and NumPy, without relying on external libraries such as TensorFlow, Keras, or scikit-learn. The implemented algorithms include classification, regression, clustering, and basic neural network models.
-                  </p>
-                  <strong class="project-title">
-                      <a href="https://github.com/aymane-maghouti/Machine-Learning-From-Scratch.git" class="more-details"> More details</a>
-                  </strong>
-              </div>
-          </div>
-
-            <div class="project-card">
-              <div class="project-image">
-                  <img src="img/student.png" />
-              </div>
-              <div class="project-info">
-                <h2 style="font-size: large;">E-Student</h2>
-                  <p class="project-category" >
-                    E-student is Student Management System project built using Python, the Tkinter library and MySQL DataBase. The application allows students to register, access their personal profile, and download course materials...
-                  </p>
-                  <strong class="project-title">
-                      <a href="https://github.com/aymane-maghouti/E-student" class="more-details"> More details</a>
-                  </strong>
-              </div>
-          </div>
-
-          <div class="project-card">
-                <div class="project-image">
-                    <img src="img/machine learning basics.png" />
-                </div>
-                <div class="project-info">
-                  <h2 style="font-size: large;">Machine Learning basics</h2>
-                    <p class="project-category">
-                      This is a basic repository which contains a simple application of machine learning algorithms such as  regression algorithms, classification algorithms and clustering also some statistical methods for data analysis.
-                    </p>
-                    <strong class="project-title">
-                        <a href="https://github.com/aymane-maghouti/Machine-Learning-basics" class="more-details"> More details</a>
-                    </strong>
-                </div>
-            </div>
-
-            <!-- <div class="project-card">
-                <div class="project-image">
-                    <img src="img/price.png" />
-                </div>
-                <div class="project-info">
-                  <h2 style="font-size: large;">Car Price Prediction</h2>
-                    <p class="project-category">
-                      The "Car Price Prediction" project aims to develop a machine learning model capable of accurately estimating the price of a car based on its features and attributes. The goal is to provide potential buyers and sellers with a reliable car price estimate, using machine learning techniques to analyze historical vehicle data.
-                    </p>
-                    <strong class="project-title">
-                        <a href="https://github.com/aymane-maghouti" class="more-details"> More details</a>
-                    </strong>
-                </div>
-            </div> -->
-        </div>
-  </section>
-  <!-- End Projects Section -->
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./img/me.jpg" alt="img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Data Engineering student</h2>
-        <p>Hello, I am Aymane Maghouti, a passionate and motivated individual currently pursuing my studies in Data Engineering at the National School of Applied Sciences in Al Hoceima (ENSAH).
-           As a student of Data Engineering, I have developed a strong foundation in data analytics, machine learning, and database management.
-            I am fascinated by the power of data and its ability to transform businesses and drive informed decision-making.
-             I enjoy collaborating with teams and taking on challenging projects that allow me to apply my knowledge to real-world scenarios.
-             For more details download my resume below.</p>
-        <a href="#" class="cta" id="downloadLink">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+212 6 56 15 58 67</h2>
-            <h2>+212 7 14 38 22 16</h2>
-
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>aymanemaghouti16@gmail.com</h2>
-            <h2>aymanemaghouti@gmail.com</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Taza, Fes, Morocco</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
 
   <!-- Footer -->
   <section id="footer">
@@ -604,7 +831,7 @@
         </div>
 
       </div>
-      <p>Copyright © 2023 AymaneMG| All rights reserved</p>
+      <p>Copyright © 2025 AymaneMG| All rights reserved</p>
     </div>
   </section>
   <!-- End Footer -->
