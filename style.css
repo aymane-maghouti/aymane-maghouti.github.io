@@ -1562,6 +1562,7 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
 }
 
+
 /* Cards */
 .pj-card{
   background: var(--pj-card-bg);
@@ -2053,4 +2054,378 @@ p {
     align-items: center;
     text-align: center;
   }
+}
+
+/* ===== Talks v2 – from scratch ===== */
+:root{
+  --ink:#0b1220;
+  --ink-2:#374151;
+  --ink-3:#6b7280;
+  --card:#fff;
+  --border:#e5e7eb;
+  --bg:#f8fafc;
+
+  --brand:#ff3b67;      /* default accent */
+  --talk:#ff3b67;       /* Talk */
+  --collab:#4338ca;     /* Collaboration */
+  --research:#155e75;   /* Research */
+  --workshop:#065f46;   /* Workshop */
+  --training:#9a3412;   /* Training */
+}
+
+.talks.v2 {
+  padding: clamp(56px, 7vw, 96px) 0;
+  background: #ffffff; /* pure white background */
+}.talks__container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+.talks__list{
+  list-style:none;margin:0;padding:0;
+  display:grid;gap:18px
+}
+
+.talk-card{
+  display:grid;
+  grid-template-columns:88px 1fr;
+  gap:18px;
+  align-items:flex-start;
+}
+
+.talk-card__logo{
+  width:88px;height:88px;border-radius:20px;background:var(--card);
+  border:1px solid var(--border);
+  box-shadow:0 14px 40px rgba(15,23,42,.10);
+  display:grid;place-items:center;overflow:hidden;
+}
+.talk-card__logo img{width:84%;height:84%;object-fit:contain;display:block}
+
+.talk-card__body{
+  position:relative; /* anchor for badge */
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px 24px 20px;
+  box-shadow:0 18px 60px rgba(15,23,42,.10);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.talk-card__body:hover{
+  transform:translateY(-3px);
+  border-color:rgba(0,0,0,.08);
+  box-shadow:0 28px 84px rgba(15,23,42,.14);
+}
+
+/* Top-right status badge */
+.talk-card__badge{
+  position:absolute;top:14px;right:14px;
+  padding:8px 14px;border-radius:999px;
+  font-size:clamp(0.95rem,1.2vw,1.05rem);
+  font-weight:800;letter-spacing:.02em;line-height:1;
+  border:1px solid var(--border);
+  background:rgba(0,0,0,.04);color:var(--brand);
+}
+.talk-card__badge--talk{ background:rgba(255,59,103,.08); color:var(--talk); border-color:rgba(255,59,103,.28) }
+.talk-card__badge--collab{ background:#eef2ff; color:var(--collab); border-color:#c7d2fe }
+.talk-card__badge--research{ background:#ecfeff; color:var(--research); border-color:#a5f3fc }
+.talk-card__badge--workshop{ background:#ecfdf5; color:var(--workshop); border-color:#a7f3d0 }
+.talk-card__badge--training{ background:#fff7ed; color:var(--training); border-color:#fed7aa }
+
+/* Big, readable typography */
+.talk-card__title{
+  margin:0 0 6px 0;
+  color:var(--ink);
+  font-weight:900;
+  font-size:clamp(1.35rem,2.4vw,1.7rem);
+  line-height:1.18;
+  padding-right:140px; /* keep text away from badge */
+}
+
+.talk-card__meta{
+  display:flex;gap:12px;flex-wrap:wrap;
+  color:var(--ink-3);
+  font-size:clamp(1.02rem,1.4vw,1.1rem);
+  margin-bottom:12px;
+}
+.talk-card__meta .dot{opacity:.5}
+
+.talk-card__desc{
+  color:var(--ink-2);
+  font-size:clamp(1.12rem,1.8vw,1.22rem);
+  line-height:1.85;
+  margin:8px 0 14px;
+}
+
+/* Bullets – bigger */
+.talk-card__bullets{
+  list-style:none;margin:0 0 14px 0;padding:0;display:grid;gap:10px;
+}
+.talk-card__bullets li{
+  position:relative;padding-left:24px;
+  color:var(--ink-2);
+  font-size:clamp(1.06rem,1.7vw,1.18rem);
+  line-height:1.65;
+}
+.talk-card__bullets li::before{
+  content:"•";position:absolute;left:6px;top:0;line-height:1;
+  color:var(--brand);font-weight:900;
+}
+
+/* Tags – bigger chips */
+.talk-card__tags{
+  list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;
+}
+.talk-card__tags li{
+  font-size:clamp(1rem,1.5vw,1.08rem);
+  font-weight:700;color:var(--ink);
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:999px;padding:9px 14px;line-height:1;
+  transition:border-color .2s ease, color .2s ease;
+}
+.talk-card__tags li:hover{color:var(--brand);border-color:rgba(0,0,0,.18)}
+
+/* Responsive */
+@media (max-width:920px){
+  .talk-card{grid-template-columns:72px 1fr}
+  .talk-card__logo{width:72px;height:72px;border-radius:16px}
+}
+@media (max-width:640px){
+  .talk-card{grid-template-columns:56px 1fr}
+  .talk-card__logo{width:56px;height:56px;border-radius:14px}
+  .talk-card__body{padding:18px}
+  .talk-card__badge{top:10px;right:10px}
+  .talk-card__title{padding-right:120px}
+}
+
+
+
+/* ===== Bigger fonts for Talks v2 ===== */
+
+/* Title */
+.talk-card__title {
+  font-size: clamp(1.6rem, 2.8vw, 2rem); /* bigger */
+  line-height: 1.2;
+}
+
+/* Meta (place + date) */
+.talk-card__meta {
+  font-size: clamp(1.15rem, 1.6vw, 1.25rem);
+}
+
+/* Description */
+.talk-card__desc {
+  font-size: clamp(1.3rem, 2vw, 1.45rem); /* much bigger */
+  line-height: 1.9;
+}
+
+/* Bullets */
+.talk-card__bullets li {
+  font-size: clamp(1.25rem, 2vw, 1.4rem);
+  line-height: 1.75;
+}
+
+/* Tags */
+.talk-card__tags li {
+  font-size: clamp(1.15rem, 1.8vw, 1.3rem);
+  padding: 10px 16px;
+}
+
+
+/* Make xp-card full width like the second one */
+.xp-card {
+  width: 100%;
+  max-width: 100%;   /* remove any max-width limit */
+  display: block;    /* ensure it takes full line */
+  margin: 0 auto;    /* center if inside container */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header container */
+.header {
+  width: 100%;
+  background: #2c3440; /* your dark background */
+}
+
+/* Navigation bar as flex */
+.nav-bar {
+  display: flex;
+  justify-content: space-between; /* brand on left, menu on right */
+  align-items: center; /* vertically align brand + menu */
+  padding: 10px 50px; /* adjust spacing */
+}
+
+/* Brand */
+.brand h1 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Navigation list */
+.nav-list ul {
+  display: flex;
+  gap: 30px; /* spacing between items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list ul li a {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-list ul li a:hover {
+  color: #e63946; /* hover effect */
+}
+
+
+
+/* --- Base keeps from previous answer --- */
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Toggle button looks like a link but stays a button for accessibility */
+.dropdown__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 0;
+  transition: color .3s ease;
+}
+.dropdown__toggle:hover,
+.dropdown__toggle:focus {
+  color: #2E90FA;
+  outline: none;
+}
+
+/* Chevron rotation when open */
+.dropdown__toggle[aria-expanded="true"] .chev {
+  transform: rotate(180deg);
+  transition: transform .25s ease;
+}
+
+/* Submenu */
+.submenu {
+  position: absolute;
+  top: calc(100% + .75rem);
+  left: 0;
+  min-width: 220px;
+  padding: .75rem;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  border-radius: 12px;
+  list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity .2s ease, transform .2s ease;
+  z-index: 1001;
+}
+
+/* Submenu items */
+.submenu li a {
+  display: block;
+  padding: .6rem .75rem;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+}
+.submenu li a:hover,
+.submenu li a:focus {
+  background: #F5F9FF;
+  color: #2E90FA;
+}
+
+/* Show submenu on hover/focus (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover > .submenu,
+  .dropdown:focus-within > .submenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile styles: submenu becomes inline list */
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
+    padding: 2rem 1.25rem;
+    gap: 1rem;
+    transition: right .3s ease;
+    overflow-y: auto;
+  }
+  .menu.active { right: 0; }
+
+  .dropdown { width: 100%; }
+
+  .dropdown__toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: .6rem .5rem;
+    border-radius: 10px;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    border: 0;
+    padding: .25rem 0 .25rem .75rem;
+    margin-top: .25rem;
+    opacity: 1;             /* always visible when we add .open via JS */
+    transform: none;
+    pointer-events: auto;
+    display: none;          /* hidden until .open */
+  }
+  .submenu.open { display: block; }
+
+  .submenu li a { padding: .5rem 0; }
+}
+
+
+
+#primary-menu li a {
+  font-size: 14px;   /* try 14px or 15px for a modern compact look */
+  font-weight: 500;  /* medium weight looks cleaner */
+  letter-spacing: 0.3px; /* optional: adds some breathing space */
+}
+
+/* Style the whole nav list */
+#primary-menu {
+  list-style: none;       /* remove default bullets */
+  margin: 0;              /* reset default margin */
+  padding: 0;             /* reset default padding */
+  display: flex;          /* align items in a row */
+  gap: 24px;              /* spacing between items */
+  font-size: 14px;        /* apply smaller font size to all children */
+  font-weight: 500;       /* consistent medium weight */
 }

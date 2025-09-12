@@ -30,7 +30,9 @@
         </div>
         <ul id="primary-menu">
           <li><a href="#hero" data-after="Home">Home</a></li>
+          <li><a href="#about" data-after="about">About</a></li>
           <li><a href="#experience" data-after="Experience">Experience</a></li> <!-- new -->
+          <li><a href="#talks" data-after="Talks">Collaboration</a></li> <!-- new -->
           <li><a href="#services" data-after="Services">Services</a></li> <!-- new -->
           <li><a href="#skills" data-after="Skills">Skills</a></li> <!-- updated target -->
           <li><a href="#projects" data-after="Projects">Projects</a></li>
@@ -40,16 +42,6 @@
   </div>
 </section>
 <!-- End Header -->
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- Hero -->
@@ -149,12 +141,7 @@
 <!-- Work Experience -->
 <section id="experience">
   <div class="xp container">
-    <!-- <div class="xp-header">
-      <h2 class="xp-title">Work Experience</h2>
-      <p class="xp-intro">
-        I build data platforms, streaming pipelines, and AI-powered analytics—shipped to production with measurable impact.
-      </p>
-    </div> -->
+
 
     <ol class="xp-timeline">
       <!-- Shiftbricks — Freelance -->
@@ -169,16 +156,22 @@
             <h4>Freelance Data &amp; AI Engineer · Shiftbricks</h4>
             <span class="xp-dates">Feb 2025 — Now · Part-time · Remote</span>
           </div>
-          <span class="xp-badge">AI &amp; RAG</span>
+          <span class="xp-badge">Data &amp; AI</span>
         </header>
           <p class="xp-desc">
-            Designed and implemented AI-powered data pipelines for Arabic legal documents: Azure Document Intelligence extraction,
-            semantic chunking, OpenAI/Cohere embeddings, and CosmosDB/PostgreSQL vector search. Automated data cleaning,
-            metadata extraction, hierarchical structuring; built FastAPI/Spring Boot services and dashboards.
+            Designed and deployed AI-powered pipelines for large-scale Arabic legal document processing.
           </p>
+
+          <ul class="talk-card__bullets">
+            <li>Processed 50K+ legal documents with scalable digitization & retrieval workflows.</li>
+            <li>Built ingestion & enrichment pipelines using Azure Document Intelligence, Cosmos DB, PostgreSQL.</li>
+            <li>Implemented embeddings with Azure OpenAI & Cohere, boosting semantic search precision to 80%+.</li>
+            <li>Automated metadata extraction & hierarchical structuring (manual effort reduced 2h → 15min).</li>
+            <li>Contributed to a cloud-native knowledge platform with 99.9% uptime, scaling to 1M+ docs.</li>
+          </ul>
           <ul class="xp-tags" aria-label="Technologies">
             <li>Azure Services</li><li>OpenAI/Cohere</li><li>CosmosDB (MongoDB)</li><li>PostgreSQL</li><li>Python</li>
-            <li>BeautifulSoup</li><li>FastAPI</li><li>React.JS</li>
+            <li>BeautifulSoup</li><li>FastAPI</li><li>React.JS</li><li>Prompt Engineering</li>
           </ul>
         </article>
       </li>
@@ -198,11 +191,19 @@
             <span class="xp-badge xp-badge--accent">DW &amp; BI</span>
           </header>
           <p class="xp-desc">
-            Led Oracle → SQL Server migration. Built ETL Pipelines with SSIS, partitioned purge (6h → 1 min), Kafka real-time analytics,
-            ,delivered Power BI/SSRS reporting and built monitoring system. Reduced TCO and standardized DW loads.
+            Modernized INWI’s enterprise data ecosystem by migrating from Oracle to Microsoft SQL Server and enabling real-time analytics.
           </p>
+
+          <ul class="talk-card__bullets">
+            <li>Reduced infrastructure & licensing costs by 30% through Oracle → SQL Server migration.</li>
+            <li>Built automated SSIS ETL pipelines processing 50M+ rows/day, cutting runtimes from 2h → 4min.</li>
+            <li>Integrated Kafka + Python for real-time analytics (500K+ events/15min, &lt;2s latency).</li>
+            <li>Improved storage efficiency with partition-based purge (350GB+ freed/month, jobs 6h → 1min).</li>
+            <li>Built a monitoring system (SQL Server views + SSRS dashboards) to track ETL jobs, storage usage, and system health ensuring 99.9% platform uptime.</li>
+            <li>Delivered BI reporting with Power BI & SSRS, reducing manual reporting by 70%.</li>
+          </ul>
           <ul class="xp-tags" aria-label="Technologies">
-            <li>SQL Server</li><li>SSIS</li><li>SSRS</li><li>Apache Kafka</li><li>Power BI</li><li>Python</li><li>T-SQL</li><li>Oracle Database</li>
+            <li>SQL Server</li><li>SSIS</li><li>SSRS</li><li>Apache Kafka</li><li>Power BI</li><li>Python</li><li>T-SQL</li><li>Oracle Database</li><li>Technical Documentation</li>
           </ul>
         </article>
       </li>
@@ -222,10 +223,16 @@
             <span class="xp-badge">Data Platform</span>
           </header>
           <p class="xp-desc">
-            Designed an ingestion pipeline (Medallion architecture) to transform unstructured data into structured datasets.
-            Ensured data quality, orchestrated with Airflow, and built a validation web app.
+            Built a Medallion-architecture ingestion pipeline to transform 10K+ unstructured documents into structured datasets for downstream AI applications.
           </p>
-          <ul class="xp-tags" aria-label="Technologies">
+
+          <ul class="talk-card__bullets">
+            <li>Integrated validation rules & schema checks, reducing ingestion errors by 35%.</li>
+            <li>Automated daily batch workflows with Apache Airflow (5+ DAGs, 99% job success rate).</li>
+            <li>Developed a FastAPI + React.js validation tool, cutting manual review time from 2h → 20min.</li>
+            <li>Implemented monitoring & logging in Airflow to track job failures, latency, and freshness.</li>
+          </ul>
+                    <ul class="xp-tags" aria-label="Technologies">
             <li>Python</li><li>FastAPI</li><li>React.js</li><li>MongoDB</li><li>PostgreSQL</li><li>Airflow</li>
             <li>Docker</li><li>Git/GitLab</li><li>Postman</li>
           </ul>
@@ -247,9 +254,15 @@
             <span class="xp-badge xp-badge--accent">BI &amp; DW</span>
           </header>
           <p class="xp-desc">
-            Built a Python ETL to collect train circulation data into a SQL Server warehouse.
-            Modeled a star schema and delivered Power BI dashboards for key performance indicators.
+            Designed and deployed data pipelines and dashboards to analyze 10M+ daily train circulation records and improve operational efficiency.
           </p>
+
+          <ul class="talk-card__bullets">
+            <li>Built a Python ETL pipeline loading 10M+ records/day into a SQL Server data warehouse.</li>
+            <li>Designed a star schema (fact + 8 dimensions), reducing query latency by 60%.</li>
+            <li>Developed interactive Power BI dashboards for delays, patterns, and utilization metrics.</li>
+            <li>Automated daily data refresh with SQLAlchemy, ensuring up-to-date analytics.</li>
+          </ul>
           <ul class="xp-tags" aria-label="Technologies">
             <li>SQL Server</li><li>Python</li><li>SQLAlchemy</li><li>Power BI</li><li>DAX</li>
           </ul>
@@ -271,12 +284,17 @@
             <span class="xp-badge">Full-Stack</span>
           </header>
           <p class="xp-desc">
-            Developed React.js frontends and Spring-based REST APIs; integrated FE/BE via APIs;
-            centralized config with Spring Cloud Config Server; collaborated via GitLab; Agile/Scrum with Jira.
+            Built a full-stack e-commerce platform using microservices architecture with React.js and Spring Boot.
           </p>
+
+          <ul class="talk-card__bullets">
+            <li>Developed responsive React.js frontends integrated with Spring-based REST APIs.</li>
+            <li>Centralized service configuration with Spring Cloud Config Server for scalability.</li>
+            <li>Collaborated in an Agile/Scrum workflow using Jira and GitLab CI/CD.</li>
+          </ul>
           <ul class="xp-tags" aria-label="Technologies">
             <li>Java</li><li>Spring Boot</li><li>Spring Data JPA</li><li>React.js</li><li>TypeScript</li>
-            <li>PostgreSQL</li><li>Microservices</li><li>Git/GitLab</li><li>Postman</li>
+            <li>PostgreSQL</li><li>Microservices</li><li>Git/GitLab</li><li>Postman</li><li>Scrum</li>
           </ul>
         </article>
       </li>
@@ -286,7 +304,198 @@
 <!-- End Work Experience -->
 
 
-<!-- End Experience Section -->
+
+    <p class="xp-title">Public Speaking & Training</p>
+    <h2 class="xp-title">Workshops, Lectures & Collaborations</h2>
+   
+<!-- Public Speaking & Training (Rebuilt) -->
+<section id="talks" class="talks v2">
+  <div class="talks__container">
+
+    <ol class="talks__list">
+
+      <!-- 1) Invited Speaker — Sol Plaatje University (Jul 30, 2025) -->
+      <li class="talk-card">
+        <div class="talk-card__logo">
+          <img src="img/logos/PLATJI_UNIV.png" alt="Sol Plaatje University logo" loading="lazy">
+        </div>
+
+        <article class="talk-card__body">
+          <span class="talk-card__badge talk-card__badge--talk">Talk</span>
+
+          <h3 class="talk-card__title">Sol Plaatje University — Invited Speaker</h3>
+
+          <div class="talk-card__meta">
+            <span>Visio Conference · South Africa</span>
+            <span class="dot">•</span>
+            <time datetime="2025-07-30">Jul 30, 2025</time>
+          </div>
+
+          <p class="talk-card__desc">
+            Presentation: <strong>“AI Use Cases with Big Data Technologies — A Data Engineering Perspective.”</strong>
+            Covered data engineering fundamentals, modern data platform architectures, and deep-dives into several of my
+            production-style projects — followed by an extended Q&amp;A with 20+ students.
+          </p>
+
+          <ul class="talk-card__bullets">
+            <li>Data platform patterns, lake vs warehouse, streaming & batch.</li>
+            <li>End-to-end demos: ingestion → orchestration → storage → serving → BI.</li>
+            <li>How to operationalize AI in data platforms safely & cost-effectively.</li>
+          </ul>
+
+          <ul class="talk-card__tags" aria-label="Topics & Tools">
+            <li>Data Engineering</li><li>Big Data</li><li>AI</li><li>Architecture</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- 2) Collaboration — Sol Plaatje University (Jan–Apr 2025) -->
+      <li class="talk-card">
+        <div class="talk-card__logo">
+          <img src="img/logos/PLATJI_UNIV.png" alt="Sol Plaatje University logo" loading="lazy">
+        </div>
+
+        <article class="talk-card__body">
+          <span class="talk-card__badge talk-card__badge--collab">Collaboration</span>
+
+          <h3 class="talk-card__title">Sol Plaatje University — Research Collaboration</h3>
+
+          <div class="talk-card__meta">
+            <span>Remote · South Africa</span>
+            <span class="dot">•</span>
+            <time datetime="2025-04">Jan – Apr 2025</time>
+          </div>
+
+          <p class="talk-card__desc">
+            Co-built a <strong>Sign Language Recognition Application</strong> based on an
+            <strong>Edge–Cloud Hybrid Architecture</strong> for real-time and privacy-preserving inference. We aligned on
+            the use-case, collected &amp; labeled the dataset (video), trained AI models, and delivered a mobile app with
+            cloud streaming for continuous learning.
+          </p>
+
+          <ul class="talk-card__bullets">
+            <li>Data ops: video collection, labeling pipeline, dataset curation.</li>
+            <li>Mobile app: <strong>React Native</strong> UI + <strong>FastAPI</strong> service layer.</li>
+            <li>Cloud backbone: <strong>Kafka</strong> + <strong>Spark Streaming</strong> + <strong>HDFS</strong> for ingestion &amp; feedback loops.</li>
+          </ul>
+
+          <ul class="talk-card__tags" aria-label="Tools">
+            <li>HDFS</li><li>Kafka</li><li>Spark Streaming</li><li>Python</li>
+            <li>React Native</li><li>FastAPI</li><li>REST APIs</li><li>Git</li><li>GitHub</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- 3) UM6P — Research (Jan 2025) -->
+      <li class="talk-card">
+        <div class="talk-card__logo">
+          <img src="img/logos/UM6P.jpg" alt="UM6P logo" loading="lazy">
+        </div>
+
+        <article class="talk-card__body">
+          <span class="talk-card__badge talk-card__badge--research">Research</span>
+
+          <h3 class="talk-card__title">UM6P — College of Computing</h3>
+
+          <div class="talk-card__meta">
+            <span>Remote · Morocco</span>
+            <span class="dot">•</span>
+            <time datetime="2025-01">Jan 2025</time>
+          </div>
+
+          <p class="talk-card__desc">
+            Topic: <strong>“Forecasting Large-Scale Renewable Energy Sources Through Statistical Methods with Anomalies.”</strong>
+            I surveyed literature, designed experiments, and built a benchmarking suite across time-series models.
+          </p>
+
+          <ul class="talk-card__bullets">
+            <li>EDA on historical generation data &amp; <strong>outlier detection</strong> / treatment.</li>
+            <li>Modeling: <strong>ARIMA / SARIMA / ARIMAX / SARIMAX</strong> baselines &amp; comparisons.</li>
+            <li>Weekly reporting with metrics dashboards &amp; model insights.</li>
+          </ul>
+
+          <ul class="talk-card__tags" aria-label="Tools">
+            <li>Python</li><li>NumPy</li><li>Pandas</li><li>ARIMA</li><li>SARIMA</li>
+            <li>ARIMAX</li><li>SARIMAX</li><li>APIs</li><li>Git/GitHub</li><li>Documentation</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- 4) ENSAH — Hands-on ETL Workshop (Feb 26, 2024) -->
+      <li class="talk-card">
+        <div class="talk-card__logo">
+          <img src="img/logos/ENSAH.png" alt="ENSAH logo" loading="lazy">
+        </div>
+
+        <article class="talk-card__body">
+          <span class="talk-card__badge talk-card__badge--workshop">Workshop</span>
+
+          <h3 class="talk-card__title">ENSAH — Hands-on ETL Workshop</h3>
+
+          <div class="talk-card__meta">
+            <span>Al Hoceima, Morocco</span>
+            <span class="dot">•</span>
+            <time datetime="2024-02-26">Feb 26, 2024</time>
+          </div>
+
+          <p class="talk-card__desc">
+            Invited by the Data Club. Introduced ETL fundamentals and the data ecosystem, then led a
+            <strong>end-to-end project</strong>: collect → raw → extract → transform → load to a
+            <strong>data warehouse</strong>, followed by a <strong>Power BI</strong> dashboard (30+ participants).
+          </p>
+
+          <ul class="talk-card__bullets">
+            <li>ETL patterns &amp; pipeline management in practice.</li>
+            <li>Data collection &amp; storage, then warehousing &amp; serving.</li>
+            <li>Hands-on BI storytelling on top of curated data.</li>
+          </ul>
+
+          <ul class="talk-card__tags" aria-label="Tools">
+            <li>Python</li><li>Pandas</li><li>BeautifulSoup</li><li>PostgreSQL</li>
+            <li>ETL</li><li>Data Warehouse</li><li>Power BI</li>
+          </ul>
+        </article>
+      </li>
+
+      <!-- 5) ENSAH — ML Training (Mar 7, 2024) -->
+      <li class="talk-card">
+        <div class="talk-card__logo">
+          <img src="img/logos/ENSAH.png" alt="ENSAH logo" loading="lazy">
+        </div>
+
+        <article class="talk-card__body">
+          <span class="talk-card__badge talk-card__badge--training">Training</span>
+
+          <h3 class="talk-card__title">ENSAH — ML Training: Logistic Regression</h3>
+
+          <div class="talk-card__meta">
+            <span>Al Hoceima, Morocco</span>
+            <span class="dot">•</span>
+            <time datetime="2024-03-07">Mar 7, 2024</time>
+          </div>
+
+          <p class="talk-card__desc">
+            Invitation from the Data Club. Explained <strong>classification</strong> fundamentals, then built a complete
+            <strong>Logistic Regression</strong> project — from training &amp; evaluation to
+            <strong>production integration</strong> via a <strong>Flask</strong> web app with HTML/CSS/JS.
+          </p>
+
+          <ul class="talk-card__bullets">
+            <li>Math &amp; intuition of Logistic Regression.</li>
+            <li>Model training, metrics, and error analysis.</li>
+            <li>Deployment demo with Flask + simple UI.</li>
+          </ul>
+
+          <ul class="talk-card__tags" aria-label="Tools">
+            <li>Machine Learning</li><li>Classification</li><li>Python</li><li>Flask</li>
+          </ul>
+        </article>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
 
 
       <h2 class="xp-title">My Services</h2>
@@ -438,7 +647,7 @@
         <p class="sk-desc">Batch + real-time pipelines, CDC, quality and lineage.</p>
         <ul class="sk-tags">
           <li>Apache Kafka</li><li>Apache Spark</li><li>Airflow</li>
-          <li>Hadoop</li><li>Flink</li>
+          <li>Hadoop</li><li>Flink</li><li>DBT</li>
         </ul>
       </article>
 
@@ -477,7 +686,7 @@
         <h3 class="sk-name">Cloud &amp; MLOps</h3>
         <p class="sk-desc">Deploy, monitor, and automate MLOps Pipeline</p>
         <ul class="sk-tags">
-          <li>Azure</li><li>AWS</li><li>GCP</li><li>Docker</li>
+          <li>Azure</li><li>AWS</li><li>GCP</li><li>Snowflake</li><li>Docker</li>
           <li>MLflow</li>
         </ul>
       </article>
@@ -525,7 +734,7 @@
     
  
 
-    <div class="pj-grid">
+<div class="pj-grid">
       <!-- Example project card -->
       <article class="pj-card">
         <div class="pj-img">
