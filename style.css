@@ -628,6 +628,18 @@ section { padding: 10rem 0; }
   color: var(--ink-0); display: flex; align-items: center;
 }
 .footer-tagline { font-size: 1.7rem; color: var(--ink-2); line-height: 1.7; }
+.footer-quote {
+  font-family: var(--font-display); font-size: clamp(1.8rem, 2vw, 2.4rem);
+  font-style: italic; font-weight: 500;
+  color: var(--ink-3); line-height: 1.6;
+  border-left: 2px solid var(--lime);
+  padding: 1.2rem 2rem;
+  background: rgba(184,255,87,.04);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  max-width: 600px;
+  transition: color .3s, border-color .3s;
+}
+.footer-quote:hover { color: var(--ink-1); }
 .footer-social { display: flex; gap: 1rem; margin-top: .5rem; }
 .footer-social a {
   width: 44px; height: 44px; border-radius: var(--radius-sm);
